@@ -75,7 +75,7 @@ truck[2]='UK06CB0218';
 truck[3]='UP26T0253';
 truck[4]='HR38K0301';
 truck[5]='UK03CA0494';
-truck[6]='UK06CA0530';
+truck[6]='UK05CA0530';
 truck[7]='HR38K0743';
 truck[8]='UK04CA0807';
 truck[9]='HR38J1185';
@@ -94,7 +94,7 @@ truck[21]='HR55G4015';
 truck[22]='RJ05GA4417';
 truck[23]='HR55G4621';
 truck[24]='HR454550';
-truck[25]='uk06cb2237';
+truck[25]='UK06CB2237';
 truck[26]='HR38D5356';
 truck[27]='UK06CB1694';
 truck[28]='HR38K5664';
@@ -127,6 +127,7 @@ truck[54]='UK06CB1019';
 truck[55]='UP22T3578';
 truck[56]='UP25AT7954';
 truck[57]='UK06CB0770';
+truck[58]='UK04CA2022';
 
 $(truck).ready( function() {
     $(truck).each( function(index, item) {
