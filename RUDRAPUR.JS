@@ -58,7 +58,7 @@ $('.sapMLabel').each(function() {
 (function(){
                         $("label:contains('Truck No')").parent().next().find('input').blur(function(){
 			var val=$("label:contains('Truck No')").parent().next().find('input').val();
-			var obj=$("#KASHIPUR").find("option[value='"+val+"']");
+			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
 					if(obj !=null && obj.length>0)
                      return false;
                       else
