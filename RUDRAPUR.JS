@@ -7,6 +7,9 @@
     }
     $("label:contains('Dispatch Bags')").parent().next().find('input').keypress(isNumberKey);
     $("label:contains('LR No.')").parent().next().find('input').attr("Autocomplete","ON");
+    $("label:contains('Driver Mobile No')").parent().next().find('input').attr("Autocomplete","ON");	
+    $("label:contains('Customer Address')").parent().next().find('textarea').css('background-color','lightblue');
+    $("label:contains('Consignee Address')").parent().next().find('textarea').css('background-color','lightblue');	
     $("label:contains('Truck No')").parent().next().find('input').attr({
             maxlength: "10",
             Autocomplete: "OFF",
@@ -56,13 +59,14 @@ $('.sapMLabel').each(function() {
 	$(".sapMLabel").css("color", "#000000");
 });
 (function(){
-                        $("label:contains('Truck No')").parent().next().find('input').blur(function(){
-			var val=$("label:contains('Truck No')").parent().next().find('input').val();
+            $("label:contains('Truck No')").parent().next().find('input').blur(function(){
+           var val=$("label:contains('Truck No')").parent().next().find('input').val();
 			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
-					if(obj !=null && obj.length>0)
+					 if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
                      return false;
-                      else
-     					alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");})})();
+                     else
+     					alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");
+    $("label:contains('Truck No')").parent().next().find('input').focusin().select();})})();
 (function(){
     $("input").focusin(function(){
         $(this).css("background-color", "yellow");
