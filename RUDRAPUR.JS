@@ -1,5 +1,6 @@
-(function() {
-    function isNumberKey(evt) {
+function gmMain () {
+    console.log ('A "New" page has loaded.');
+ window.setInterval(function(){function isNumberKey(evt) {
         var charCode = (evt.which) ? evt.which : event.keyCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57))
             return false;
@@ -7,16 +8,16 @@
     }
     $("label:contains('Dispatch Bags')").parent().next().find('input').keypress(isNumberKey);
     $("label:contains('LR No.')").parent().next().find('input').attr("Autocomplete","ON");
-    $("label:contains('Driver Mobile No')").parent().next().find('input').attr("Autocomplete","ON");	
+    $("label:contains('Driver Mobile No')").parent().next().find('input').attr("Autocomplete","ON");
     $("label:contains('Customer Address')").parent().next().find('textarea').css('background-color','lightblue');
-    $("label:contains('Consignee Address')").parent().next().find('textarea').css('background-color','lightblue');	
+    $("label:contains('Consignee Address')").parent().next().find('textarea').css('background-color','lightblue');
     $("label:contains('Truck No')").parent().next().find('input').attr({
             maxlength: "10",
             Autocomplete: "OFF",
             list: "RUDRAPUR",
             Placeholder: "TRUCK NUMBER",
             style: "text-transform: uppercase"
-            }).after('<Datalist ID=RUDRAPUR></Datalist>');})();
+            }).after('<Datalist ID=RUDRAPUR></Datalist>');
          if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "66") {
 	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in ROORKEE PLANT").css({
 		'font-weight': 'bold',
@@ -62,7 +63,7 @@ $('.sapMLabel').each(function() {
             $("label:contains('Truck No')").parent().next().find('input').blur(function(){
            var val=$("label:contains('Truck No')").parent().next().find('input').val();
 			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
-					 if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
+		if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
                      return false;
                      else
      					alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");
@@ -138,4 +139,4 @@ $(truck).ready( function() {
         var option = $('<option value="'+item+'"></option>');
         $('#RUDRAPUR').append(option);
     });
-});
+});},1000);}
