@@ -1,6 +1,6 @@
 function gmMain () {
     console.log ('A "New" page has loaded.');
- window.setInterval(function(){function isNumberKey(evt) {
+ function isNumberKey(evt) {
         var charCode = (evt.which) ? evt.which : event.keyCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57))
             return false;
@@ -18,7 +18,7 @@ function gmMain () {
             Placeholder: "TRUCK NUMBER",
             style: "text-transform: uppercase"
             }).after('<Datalist ID=RUDRAPUR></Datalist>');
-         if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "66") {
+        setInterval(function(){  if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "66") {
 	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in ROORKEE PLANT").css({
 		'font-weight': 'bold',
 		'color': 'black',
@@ -48,7 +48,7 @@ function gmMain () {
 		'color': 'black',
 		'text-align': 'center'
 	});
-};
+};},1000)
 $(".sapMInputBaseDisabled").css({
 	opacity: 0.99
 });
@@ -73,7 +73,7 @@ $('.sapMLabel').each(function() {
         $(this).css("background-color", "yellow");
     });
     $("input").focusout(function(){
-        $(this).css("background-color", "white");});})(); 
+        $(this).css("background-color", "white");});})();
 var truck = new Array();
 truck[0]='UP22T0047';
 truck[1]='UK06CB0218';
@@ -139,4 +139,4 @@ $(truck).ready( function() {
         var option = $('<option value="'+item+'"></option>');
         $('#RUDRAPUR').append(option);
     });
-});},1000);}
+});}
