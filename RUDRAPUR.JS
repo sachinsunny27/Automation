@@ -139,4 +139,5 @@ $(truck).ready( function() {
         var option = $('<option value="'+item+'"></option>');
         $('#RUDRAPUR').append(option);
     });
+	$("Datalist").slice(1).remove();
 });}
