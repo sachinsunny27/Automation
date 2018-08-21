@@ -6,6 +6,8 @@ function gmMain () {
             return false;
         return true;
     }
+        (function(){
+    if ($("span:contains(Order Details)").length > 0){
     $("label:contains('Dispatch Bags')").parent().next().find('input').keypress(isNumberKey);
     $("label:contains('LR No.')").parent().next().find('input').attr("Autocomplete","ON");
     $("label:contains('Driver Mobile No')").parent().next().find('input').attr("Autocomplete","ON");
@@ -48,7 +50,8 @@ function gmMain () {
 		'color': 'black',
 		'text-align': 'center'
 	});
-};},1000)
+};},1000)}
+            return false;})();
 $(".sapMInputBaseDisabled").css({
 	opacity: 0.99
 });
