@@ -16,10 +16,10 @@ function gmMain () {
     $("label:contains('Truck No')").parent().next().find('input').attr({
             maxlength: "10",
             Autocomplete: "OFF",
-            list: "RUDRAPUR",
+            list: "KOTDWAR",
             Placeholder: "TRUCK NUMBER",
             style: "text-transform: uppercase"
-            }).after('<Datalist ID=RUDRAPUR></Datalist>');
+            }).after('<Datalist ID=KOTDWAR></Datalist>');
         setInterval(function(){  if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "66") {
 	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in ROORKEE PLANT").css({
 		'font-weight': 'bold',
@@ -55,7 +55,7 @@ function gmMain () {
 $(".sapMInputBaseDisabled").css({
 	opacity: 0.99
 });
-$('.DCA-FormField input:not(.sapMComboBoxInner), .sapMInputBaseInner, .sapMComboBox').each(function() {
+$('.DCA-FormField input:not(.sapMComboBoxInner), .sapMInputBaseInner, .sapMComboBox, .sapMText, .sapMSelectListCell').each(function() {
 	this.style.setProperty('font-size', '20px', 'important');
 });
 $('.sapMLabel').each(function() {
@@ -65,7 +65,7 @@ $('.sapMLabel').each(function() {
 (function(){
             $("label:contains('Truck No')").parent().next().find('input').blur(function(){
            var val=$("label:contains('Truck No')").parent().next().find('input').val();
-			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
+			var obj=$("#KOTDWAR").find("option[value='"+val+"']");
 		if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
                      return false;
                      else
@@ -145,4 +145,6 @@ $(truck).ready( function() {
         $('#RUDRAPUR').append(option);
     });
 	$("Datalist").slice(1).remove();
-});}
+            $('.sapUiTableTr').each(function() {
+	this.style.setProperty('font-weight', 'bold');
+})})};
