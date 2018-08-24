@@ -148,4 +148,5 @@ $(truck).ready( function() {
             $('.sapUiTableTr').each(function() {
 	this.style.setProperty('font-weight', 'bold');
 		    $('.sapMText') .css({'white-space':'nowrap','color': 'black'});
+		    $('.sapUiTableCtrl').css('width','auto');
 })})};
