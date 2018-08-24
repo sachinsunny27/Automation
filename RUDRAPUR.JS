@@ -147,4 +147,5 @@ $(truck).ready( function() {
 	$("Datalist").slice(1).remove();
             $('.sapUiTableTr').each(function() {
 	this.style.setProperty('font-weight', 'bold');
+		    $('.sapMText') .css({'white-space':'nowrap','color': 'black'});
 })})};
