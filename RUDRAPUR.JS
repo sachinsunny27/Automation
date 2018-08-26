@@ -150,4 +150,5 @@ $(truck).ready( function() {
 		    $('.sapMText') .css({'white-space':'nowrap','color': 'black'});
 		    $('.sapUiTableCtrl').css('width','auto');
 		    $('.sapUiTableCnt').css('background-color','#f2d7c9');
+		    $('.sapUiTableTr>td').css({'border-right-color':'#554e4e','border-bottom-color':'#554e4e'});
 })})};
