@@ -160,4 +160,10 @@ $(truck).ready( function() {
 		    $('.sapUiTableCtrl').css('width','auto');
 		    $('.sapUiTableCnt').css('background-color','#f2d7c9');
 		    $('.sapUiTableTr>td').css({'border-right-color':'#554e4e','border-bottom-color':'#554e4e'});
+		    setInterval(function(){
+    var d = new Date();
+    d.setHours(18,30,0);
+    if (d<new Date());{
+ $("span:contains('Material Receive')").remove();
+    return false;}},100)();
 })})};
