@@ -162,9 +162,9 @@ $(truck).ready( function() {
 		    $('.sapUiTableTr>td').css({'border-right-color':'#554e4e','border-bottom-color':'#554e4e'});
 		    
 })})
-(function(){
+setInterval(function(){
     var d = new Date();
     d.setHours(18,30,0);
-    if (d.getTime() > new Date().getTime()){
+    if (d.getTime() < new Date().getTime()){
  $("span:contains('Material Receive')").remove()
-    return false;}})();};
+    return false;}},500)();};
