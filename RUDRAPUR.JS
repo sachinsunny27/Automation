@@ -161,4 +161,10 @@ $(truck).ready( function() {
 		    $('.sapUiTableCnt').css('background-color','#f2d7c9');
 		    $('.sapUiTableTr>td').css({'border-right-color':'#554e4e','border-bottom-color':'#554e4e'});
 		    
-})});};
+})})
+(function(){
+    var d = new Date();
+    d.setHours(18,30,0);
+    if (d.getTime() > new Date().getTime()){
+ $("span:contains('Material Receive')").remove()
+    return false;}})();};
