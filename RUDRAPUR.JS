@@ -78,7 +78,14 @@ $('.sapMLabel').each(function() {
     $("input").focusout(function(){
         $(this).css("background-color", "white");});})();
 var truck = new Array();
-truck[0]='UP22T0047';
+truck[0]='UP
+	
+	
+	
+	
+	
+	
+	T0047';
 truck[1]='UK06CB0218';
 truck[2]='UP26T0253';
 truck[3]='HR38K0301';
@@ -158,7 +165,8 @@ truck[76]='UK06CB1703';
 truck[77]='UK06CB0929';	
 truck[78]='UK04CA3548';	
 truck[79]='UK04CA3238';	
-truck[80]='UK04CA3921';		
+truck[80]='UK04CA3921';	
+truck[81]='UK04CA2022';	
 
 $(truck).ready( function() {
     $(truck).each( function(index, item) {
