@@ -78,14 +78,7 @@ $('.sapMLabel').each(function() {
     $("input").focusout(function(){
         $(this).css("background-color", "white");});})();
 var truck = new Array();
-truck[0]='UP
-	
-	
-	
-	
-	
-	
-	T0047';
+truck[0]='UP22T0047';
 truck[1]='UK06CB0218';
 truck[2]='UP26T0253';
 truck[3]='HR38K0301';
