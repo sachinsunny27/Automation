@@ -165,6 +165,8 @@ truck[83]='UK04CA4230';
 truck[84]='UK06CA6888';	
 truck[85]='UK06CA2019';		
 truck[86]='UK06CA6380';	
+truck[87]='UP26T0445';	
+truck[88]='UP26T4985';		
 
 $(truck).ready( function() {
     $(truck).each( function(index, item) {
