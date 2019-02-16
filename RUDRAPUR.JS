@@ -167,7 +167,15 @@ truck[85]='UK06CA2019';
 truck[86]='UK06CA6380';	
 truck[87]='UP26T0445';	
 truck[88]='UP26T4985';	
-truck[89]='UK06CB2083';	
+truck[89]='UK06CB2083';
+truck[90]='UK04CB1635';	
+truck[91]='UK04CB3037';	
+truck[92]='UK04CA1295';
+truck[93]='HR38M6978';	
+truck[94]='UK04CA0153';
+	
+	
+	
 
 $(truck).ready( function() {
     $(truck).each( function(index, item) {
