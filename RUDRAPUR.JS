@@ -50,6 +50,12 @@ function gmMain () {
 		'color': 'black',
 		'text-align': 'center'
 	});
+	} else if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "15") {
+	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in KOTPUTLI PLANT").css({
+		'font-weight': 'bold',
+		'color': 'black',
+		'text-align': 'center'
+	});
 };},1000)}
             return false;})();
 $(".sapMInputBaseDisabled").css({
