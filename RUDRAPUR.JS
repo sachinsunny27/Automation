@@ -20,44 +20,61 @@ function gmMain () {
             Placeholder: "TRUCK NUMBER",
             style: "text-transform: uppercase"
             }).after('<Datalist ID=RUDRAPUR></Datalist>');
-        setInterval(function(){  if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "66") {
-	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in ROORKEE PLANT").css({
-		'font-weight': 'bold',
-		'color': 'black',
-		'text-align': 'center'
-	});
-} else if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "16") {
-	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in ALIGARH PLANT").css({
-		'font-weight': 'bold',
-		'color': 'black',
-		'text-align': 'center'
-	});
-} else if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "11") {
-	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in VIKRAM PLANT").css({
-		'font-weight': 'bold',
-		'color': 'black',
-		'text-align': 'center'
-	});
-} else if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "10") {
-	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in ADITYA PLANT").css({
-		'font-weight': 'bold',
-		'color': 'black',
-		'text-align': 'center'
-	});
-} else if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "14") {
-	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in DADRI PLANT").css({
-		'font-weight': 'bold',
-		'color': 'black',
-		'text-align': 'center'
-	});
-	} else if ($("label:contains('Meterial Code')").parent().next().find('input').val().substr(8, 2) == "15") {
-	$("span:contains(Dispatch Details)").text("Dispatch Details - This order is in KOTPUTLI PLANT").css({
-		'font-weight': 'bold',
-		'color': 'black',
-		'text-align': 'center'
-	});
-};},1000)}
-            return false;})();
+         setInterval(function()
+{
+
+ var Material = {FPPUTHP1100000:" Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - PPC",
+	F43UTHP1100000:" Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - OPC 43",
+	F53UTHP1100000:"Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - OPC 53",
+	FPPUSLH1100000:"Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - SUPER",
+	FPPUFLH1100000:"Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - WEATHER PLUS",
+	FPPUTHP1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - PPC",
+	F43UTHP1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - OPC 43",
+	F53UTHP1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - OPC 53",
+	FPPUSLH1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - SUPER",
+	FPPUFLH1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - WEATHER PLUS",
+	FPPUTHP1160000:"Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - PPC",
+	F43UTHP1160000:"Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - OPC 43",
+	F53UTHP1160000:"Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - OPC 53",
+	FPPUSLH1160000:" Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - SUPER",
+	FPPUFLH1160000:" Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - WEATHER PLUS",
+	FPPUTHP1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - PPC",
+	F43UTHP1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - OPC 43",
+	F53UTHP1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - OPC 53",
+	FPPUSLH1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - SUPER",
+	FPPUFLH1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - WEATHER PLUS",
+	FPPUTHP1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - PPC",
+	F43UTHP1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - OPC 43",
+	F53UTHP1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - OPC 53",
+	FPPUSLH1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - SUPER",
+	FPPUFLH1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - WEATHER PLUS",
+	FPPUTHP1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - PPC",
+	F43UTHP1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - OPC 43",
+	F53UTHP1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - OPC 53",
+	FPPUSLH1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - SUPER",
+	FPPUFLH1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - WEATHER PLUS",
+	FPPUTHP1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - PPC",
+	F43UTHP1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - OPC 43",
+	F53UTHP1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - OPC 53",
+	FPPUSLH1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - SUPER",
+	FPPUFLH1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - WEATHER PLUS",
+	FPPUTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - PPC",
+	F43UTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - OPC 43",
+	F53UTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - OPC 53",
+	FPPUSLH1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - SUPER",
+	FPPUFLH1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - WEATHER PLUS"};
+
+
+$.each( Material, function(index,value){
+
+if ($("label:contains('Meterial Code')").parent().next().find('input').val()== index) {
+$("span:contains(Dispatch Details)").text(value).css({
+    'font-weight': 'bold',
+    'color': 'black',
+    'text-align': 'center'
+})
+
+}})},1000)}})();
 $(".sapMInputBaseDisabled").css({
 	opacity: 0.99
 });
