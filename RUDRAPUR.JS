@@ -240,6 +240,9 @@ truck[135]='HR38M3129';
 truck[136]='UK04CA3548';
 truck[137]='UA04D6319';
 truck[138]='UA04D8713';	
+truck[139]='UK04CA8245';	
+truck[140]='UK06CA9671';	
+truck[141]='HR38M4698';	
 
 $(truck).ready( function() {
     $(truck).each( function(index, item) {
