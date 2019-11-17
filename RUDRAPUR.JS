@@ -289,7 +289,8 @@ truck[184]='UP02D4706';
 truck[185]='UK03CA1246';	
 truck[186]='RJ05GA0750';	
 truck[187]='HR55K6267';		
-truck[188]='UK06G7772';			
+truck[188]='UK06G7772';	
+truck[188]='UK04CA1862';		
 		
 		
 $(truck).ready( function() {
