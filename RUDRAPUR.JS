@@ -287,7 +287,7 @@ truck[182]='HR38M4527';
 truck[183]='UK06CB1450';
 truck[184]='UP02D4706';	
 truck[185]='UK06CA3548';	
-truck[185]='UK04CA1732';	
+truck[185]='RJ05GA0750';	
 truck[185]='HR38M4527';		
 		
 		
