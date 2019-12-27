@@ -353,7 +353,8 @@ truck[247]='UK04CA6012';
 truck[248]='UK03CA0863';	
 truck[249]='UK04CA3186';
 truck[250]='UK04CA8279';
-truck[251]='UK03CA0771';	
+truck[251]='UK03CA0771';
+truck[251]='UK05CA1663';
 	
 	
 	
