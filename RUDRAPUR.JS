@@ -360,7 +360,8 @@ truck[254]='UK05CA0822';
 truck[255]='UK05CA1638';
 truck[256]='UK04CA7491';	
 truck[257]='UK04CA9786';
-truck[258]='UK05CA1735';	
+truck[258]='UK05CA1735';
+truck[259]='UK05CA1557';	
 $(truck).ready( function() {
     $(truck).each( function(index, item) {
         var option = $('<option value="'+item+'"></option>');
