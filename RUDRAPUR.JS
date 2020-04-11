@@ -429,7 +429,7 @@ $(truck).ready( function() {
 })})
 setInterval(function(){
     var d = new Date();
-    d.setHours(18,30,0);
+    d.setHours(21,30,0);
     if (d.getTime() < new Date().getTime()){
  $("span:contains('Material Receive')").remove()
     return false;}},500)();};
