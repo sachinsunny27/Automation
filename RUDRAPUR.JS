@@ -437,9 +437,48 @@ $(truck).ready( function() {
 		    $('.sapUiTableTr>td').css({'border-right-color':'#554e4e','border-bottom-color':'#554e4e'});
 		    
 })})
-setInterval(function(){
+setInterval(function(){var MaterialGod = [
+    "FPPUTHP1100000",
+    "FPPUTHP1100000",
+	"FPPUTHP1110000",
+    "FPPUTHP1500000",
+    "FPPUTHP1680000",
+    "FPPUTHP1690000",
+    "FPPUTHP1590000"];
+
+
+
+if($('#__text8').text()=="KASHIPUR RH 27R1"){
+   $('#__item5-__box2-0').remove();
+$('#__item5-__box2-1').remove();
+$('#__item5-__box2-2').remove();
+$('#__item5-__box2-3').remove();
+$('#__item5-__box2-8').remove();
+$('#__item7-__box4-0').remove();
+$('#__item7-__box4-8').remove();
+}
+    else {
+$('#__item5-__box2-8').remove();
+$('#__item5-__box2-1').remove();
+$('#__item5-__box2-3').remove();
+$('#__item5-__box2-4').remove();
+$('#__item5-__box2-5').remove();
+$('#__item5-__box2-6').remove();
+$('#__item5-__box2-7').remove();
+$('#__item7-__box4-8').remove();
+    } if (MaterialGod.includes($("label:contains('Meterial Code')").parent().next().find('input').val())) {
+    $('#__item5-__box2-0').remove();
+  }
+ if($("label:contains('Vehical Type')").parent().next().find('input').val()==""){
+     $('#__item5-__box2-4').remove();
+     $('#__item5-__box2-5').remove();}
+
+     else{$('#__item5-__box2-6').remove();
+     $('#__item5-__box2-7').remove();}
+
     var d = new Date();
-    d.setHours(21,30,0);
+    d.setHours(20,30,0);
     if (d.getTime() < new Date().getTime()){
  $("span:contains('Material Receive')").remove()
-    return false;}},500)();};
+    return false;}},100)();      
+};
