@@ -449,7 +449,7 @@ setInterval(function(){var MaterialGod = [
 
 
 
-if($('#__text8').text()=="KASHIPUR RH 27R1"){
+if($('#__text8').text()=="RUDRAPUR RH 30R1"){
    $('#__item5-__box2-0').remove();
 $('#__item5-__box2-1').remove();
 $('#__item5-__box2-2').remove();
