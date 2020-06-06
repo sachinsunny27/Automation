@@ -18,7 +18,7 @@ function gmMain () {
             Autocomplete: "OFF",
             list: "RUDRAPUR",
             Placeholder: "TRUCK NUMBER",
-            style: "text-transform: uppercase"
+            autocapitalize:"ON"
             }).after('<Datalist ID=RUDRAPUR></Datalist>');
          setInterval(function()
 {
