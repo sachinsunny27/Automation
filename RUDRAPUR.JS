@@ -443,7 +443,7 @@ $(truck).ready( function() {
 setInterval(function(){var MaterialGod = [
     "FPPUTHP1100000",
     "FPPUTHP1100000",
-	"FPPUTHP1110000",
+"FPPUTHP1110000",
     "FPPUTHP1500000",
     "FPPUTHP1680000",
     "FPPUTHP1690000",
@@ -451,7 +451,10 @@ setInterval(function(){var MaterialGod = [
 
 
 
-if($('#__text8').text()=="RUDRAPUR RH 30R1"){
+if ($("label:contains(Consignee Address)").length > 0){
+
+
+    if($('#__text8').text()=="KASHIPUR RH 27R1"){
    $('#__item5-__box2-0').remove();
 $('#__item5-__box2-1').remove();
 $('#__item5-__box2-2').remove();
@@ -478,7 +481,7 @@ $('#__item7-__box4-8').remove();
 
      else{$('#__item5-__box2-6').remove();
      $('#__item5-__box2-7').remove();}
-
+return false;}
     var d = new Date();
     d.setHours(20,30,0);
     if (d.getTime() < new Date().getTime()){
