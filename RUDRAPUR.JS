@@ -423,7 +423,8 @@ truck[316]='UK06CB4807';
 truck[317]='UK04CA9046';
 truck[318]='UK04CB1541';
 truck[319]='UK06CB8181';
-truck[320]='UP25AT8718';	
+truck[320]='UP25AT8718';
+truck[321]='UK06CA9504';	
 		
 	
 $(truck).ready( function() {
