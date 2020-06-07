@@ -444,7 +444,7 @@ $(truck).ready( function() {
 setInterval(function(){var MaterialGod = [
     "FPPUTHP1100000",
     "FPPUTHP1100000",
-"FPPUTHP1110000",
+	"FPPUTHP1110000",
     "FPPUTHP1500000",
     "FPPUTHP1680000",
     "FPPUTHP1690000",
@@ -455,7 +455,7 @@ setInterval(function(){var MaterialGod = [
 if ($("label:contains(Consignee Address)").length > 0){
 
 
-    if($('#__text8').text()=="KASHIPUR RH 27R1"){
+    if($('#__text8').text()=="RUDRAPUR RH 30R1"){
    $('#__item5-__box2-0').remove();
 $('#__item5-__box2-1').remove();
 $('#__item5-__box2-2').remove();
@@ -487,5 +487,20 @@ return false;}
     d.setHours(20,30,0);
     if (d.getTime() < new Date().getTime()){
  $("span:contains('Material Receive')").remove()
-    return false;}},100)();      
+    return false;}
+        if($("label:contains('Delivery No.')").parent().next().find('input').val()==""){
+            $("td[id*=col3]").remove();
+            $("td[id*=col5]").remove();
+            $("td[id*=col6]").remove();
+            $("td[id*=col7]").remove();
+            $('#__column3').remove();
+            $('#__column5').remove();
+            $('#__column6').remove();
+            $('#__column7').remove();
+            $('#__column0').width("145px");
+            $('#__column1').width("200px");
+            $('#__column2').width("52px");
+            $('#__column4').width("1020px");
+        }else
+        {return false;}},100)();
 };
