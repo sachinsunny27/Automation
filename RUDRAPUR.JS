@@ -90,10 +90,10 @@ $('.sapMLabel').each(function() {
            var val=$("label:contains('Truck No')").parent().next().find('input').val();
 			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
 		if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
-                     return false;
-                     else
-     					alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");
-    $("label:contains('Truck No')").parent().next().find('input').focusin().select();})})();
+                       { $("label:contains('Driver Mobile No')").parent().next().find('input').focusin().select();
+        }   else{
+                     alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");
+    $("label:contains('Truck No')").parent().next().find('input').focusin().select();}})})();
 (function(){
     $("input").focusin(function(){
         $(this).css("background-color", "yellow");
@@ -369,7 +369,8 @@ $('.sapMLabel').each(function() {
 ["UP25AT8718",""],
 ["UK06CA9504",""],
 ["UK04CB7119",""],
-["UK03CA0241","9548502865"]	 
+["UK03CA0241","9548502865"],
+["UK06H9622","8057458517"]	 
 		 ];
 
 jQuery( function($) { // DOM ready and $ alias in scope
