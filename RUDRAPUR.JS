@@ -90,10 +90,10 @@ $('.sapMLabel').each(function() {
            var val=$("label:contains('Truck No')").parent().next().find('input').val();
 			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
 		if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
-                       { $("label:contains('Driver Mobile No')").parent().next().find('input').focusin().select();
-        }   else{
+                       return false
+                else
                      alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");
-    $("label:contains('Truck No')").parent().next().find('input').focusin().select();}})})();
+    $("label:contains('Truck No')").parent().next().find('input').focusin().select();})})();
 (function(){
     $("input").focusin(function(){
         $(this).css("background-color", "yellow");
@@ -472,5 +472,16 @@ return false;}
             $('#__column2').width("52px");
             $('#__column4').width("1020px");
         }else
-        {return false;}},100)()
+        {return false;}},1000;
+	    
+	    
+$(document).ready(function() {
+$("label:contains('Dispatch Bags')").parent().next().find('input').blur(function()
+    {
+var a=$("label:contains('Dispatch Bags')").parent().next().find('input').val()
+$("label:contains('Dispatch Bags 1')").parent().next().find('input').val(a)})
+
+$("label:contains('LR No.')").parent().next().find('input').blur(function(){
+    $("label:contains('Driver Mobile No')").parent().next().find('input').focusin().select().prop( "disabled", false );})});
+
 };
