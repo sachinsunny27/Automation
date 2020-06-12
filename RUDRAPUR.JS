@@ -472,7 +472,7 @@ return false;}
             $('#__column2').width("52px");
             $('#__column4').width("1020px");
         }else
-        {return false;}},1000;
+        {return false;}},1000);
 	    
 	    
 $(document).ready(function() {
