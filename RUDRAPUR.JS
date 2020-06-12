@@ -10,7 +10,7 @@ function gmMain () {
     if ($("label:contains(Consignee Address)").length > 0){
     $("label:contains('Dispatch Bags')").parent().next().find('input').keypress(isNumberKey);
     $("label:contains('LR No.')").parent().next().find('input').attr("Autocomplete","ON");
-    $("label:contains('Driver Mobile No')").parent().next().find('input').attr("Autocomplete","ON");
+    $("label:contains('Driver Mobile No')").parent().next().find('input').attr({Autocomplete:"ON",type:"value"});     
     $("label:contains('Customer Address')").parent().next().find('textarea').css('background-color','lightblue');
     $("label:contains('Consignee Address')").parent().next().find('textarea').css('background-color','lightblue');
     $("label:contains('Truck No')").parent().next().find('input').attr({
@@ -20,7 +20,7 @@ function gmMain () {
             Placeholder: "TRUCK NUMBER",
             autocapitalize:"ON"
             }).after('<Datalist ID=RUDRAPUR></Datalist>');
-         setInterval(function()
+       setInterval(function()
 {
 
  var Material = {FPPUTHP1100000:" Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - PPC",
@@ -62,7 +62,10 @@ function gmMain () {
 	F43UTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - OPC 43",
 	F53UTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - OPC 53",
 	FPPUSLH1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - SUPER",
-	FPPUFLH1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - WEATHER PLUS"};
+	FPPUFLH1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - WEATHER PLUS",
+	FPPUTHP1690000:"Dispatch Details- THIS ORDER MADE IN  MAIHAR PLANT - PPC",	 
+	FPPUTHP1500000:"Dispatch Details- THIS ORDER MADE IN  BELA PLANT - PPC",};
+	       
 
 
 $.each( Material, function(index,value){
@@ -88,9 +91,10 @@ $('.sapMLabel').each(function() {
 (function(){
             $("label:contains('Truck No')").parent().next().find('input').blur(function(){
            var val=$("label:contains('Truck No')").parent().next().find('input').val();
-			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
+			var obj=$("#KASHIPUR").find("option[value='"+val+"']");
 		if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
-                       return false
+                      
+           return false
                 else
                      alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");
     $("label:contains('Truck No')").parent().next().find('input').focusin().select();})})();
@@ -100,11 +104,9 @@ $('.sapMLabel').each(function() {
     });
     $("input").focusout(function(){
         $(this).css("background-color", "white");});})();
-
 	
-	 const options = [
-		 
-		 ["UP22T0047",""],
+ const options = [
+["UP22T0047",""],
 ["UK06CB0218",""],
 ["UP26T0253",""],
 ["HR38K0301",""],
@@ -370,8 +372,9 @@ $('.sapMLabel').each(function() {
 ["UK06CA9504",""],
 ["UK04CB7119",""],
 ["UK03CA0241","9548502865"],
-["UK06H9622","8057458517"]	 
-		 ];
+["UK06H9622","8057458517"]
+ ];
+
 
 jQuery( function($) { // DOM ready and $ alias in scope
 
@@ -414,7 +417,7 @@ jQuery( function($) { // DOM ready and $ alias in scope
 setInterval(function(){var MaterialGod = [
     "FPPUTHP1100000",
     "FPPUTHP1100000",
-"FPPUTHP1110000",
+    "FPPUTHP1110000",
     "FPPUTHP1500000",
     "FPPUTHP1680000",
     "FPPUTHP1690000",
@@ -432,7 +435,7 @@ $('#__item5-__box2-2').remove();
 $('#__item5-__box2-3').remove();
 $('#__item5-__box2-8').remove();
 $('#__item7-__box4-0').remove();
-$('#__item7-__box4-8').remove();
+
 }
     else {
 $('#__item5-__box2-8').remove();
@@ -442,7 +445,8 @@ $('#__item5-__box2-4').remove();
 $('#__item5-__box2-5').remove();
 $('#__item5-__box2-6').remove();
 $('#__item5-__box2-7').remove();
-$('#__item7-__box4-8').remove();
+$('#__item7-__box4-0').remove();
+
     } if (MaterialGod.includes($("label:contains('Meterial Code')").parent().next().find('input').val())) {
     $('#__item5-__box2-0').remove();
   }
@@ -471,10 +475,9 @@ return false;}
             $('#__column1').width("200px");
             $('#__column2').width("52px");
             $('#__column4').width("1020px");
-        }else
-        {return false;}},1000);
-	    
-	    
+        }else{
+        return false;}}),1000;
+
 $(document).ready(function() {
 $("label:contains('Dispatch Bags')").parent().next().find('input').blur(function()
     {
