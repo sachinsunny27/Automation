@@ -4,106 +4,50 @@ function gmMain () {
         var charCode = (evt.which) ? evt.which : event.keyCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57))
             return false;
+     {
         return true;
-    }
-        (function(){
-    if ($("label:contains(Consignee Address)").length > 0){
-    $("label:contains('Dispatch Bags')").parent().next().find('input').keypress(isNumberKey);
-    $("label:contains('LR No.')").parent().next().find('input').attr("Autocomplete","ON");
-    $("label:contains('Driver Mobile No')").parent().next().find('input').attr({Autocomplete:"ON",type:"value"});     
-    $("label:contains('Customer Address')").parent().next().find('textarea').css('background-color','lightblue');
-    $("label:contains('Consignee Address')").parent().next().find('textarea').css('background-color','lightblue');
-    $("label:contains('Truck No')").parent().next().find('input').attr({
-            maxlength: "10",
-            Autocomplete: "OFF",
-            list: "RUDRAPUR",
-            Placeholder: "TRUCK NUMBER",
-            autocapitalize:"ON"
-            }).after('<Datalist ID=RUDRAPUR></Datalist>');
-       setInterval(function()
+    }}
+       (function(){
+    if ($("bdi:contains('Consignee Address')").length > 0){
+    $("bdi:contains('Dispatch Bags')").closest('div').next().find('input').keypress(isNumberKey);
+    $("bdi:contains('LR No.')").closest('div').next().find('input').attr("Autocomplete","ON");
+    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').val(8171751515).attr({Autocomplete:"ON",type:"value"});
+    $("bdi:contains('Customer Address')").closest('div').next().find('textarea').css('background-color','lightblue');
+    $("bdi:contains('Consignee Address')").closest('div').next().find('textarea').css('background-color','lightblue');
+    $("bdi:contains('Truck No')").closest('div').next().find('input').attr({Placeholder: "TRUCK NUMBER"})
+    
+  }})();
+
+    setInterval(function()
 {
-
- var Material = {FPPUTHP1100000:" Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - PPC",
-	F43UTHP1100000:" Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - OPC 43",
-	F53UTHP1100000:"Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - OPC 53",
-	FPPUSLH1100000:"Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - SUPER",
-	FPPUFLH1100000:"Dispatch Details - THIS ORDER MADE IN  ADITYA PLANT - WEATHER PLUS",
-	FPPUTHP1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - PPC",
-	F43UTHP1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - OPC 43",
-	F53UTHP1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - OPC 53",
-	FPPUSLH1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - SUPER",
-	FPPUFLH1110000:"Dispatch Details - THIS ORDER MADE IN  VIKRAM PLANT - WEATHER PLUS",
-	FPPUTHP1160000:"Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - PPC",
-	F43UTHP1160000:"Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - OPC 43",
-	F53UTHP1160000:"Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - OPC 53",
-	FPPUSLH1160000:" Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - SUPER",
-	FPPUFLH1160000:" Dispatch Details - THIS ORDER MADE IN  ALIGARH PLANT - WEATHER PLUS",
-	FPPUTHP1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - PPC",
-	F43UTHP1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - OPC 43",
-	F53UTHP1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - OPC 53",
-	FPPUSLH1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - SUPER",
-	FPPUFLH1660000:" Dispatch Details - THIS ORDER MADE IN  ROORKEE PLANT - WEATHER PLUS",
-	FPPUTHP1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - PPC",
-	F43UTHP1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - OPC 43",
-	F53UTHP1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - OPC 53",
-	FPPUSLH1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - SUPER",
-	FPPUFLH1150000:"Dispatch Details- THIS ORDER MADE IN  KOTPUTLI PLANT - WEATHER PLUS",
-	FPPUTHP1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - PPC",
-	F43UTHP1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - OPC 43",
-	F53UTHP1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - OPC 53",
-	FPPUSLH1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - SUPER",
-	FPPUFLH1140000:"Dispatch Details- THIS ORDER MADE IN  DADRI PLANT - WEATHER PLUS",
-	FPPUTHP1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - PPC",
-	F43UTHP1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - OPC 43",
-	F53UTHP1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - OPC 53",
-	FPPUSLH1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - SUPER",
-	FPPUFLH1680000:"Dispatch Details- THIS ORDER MADE IN  NATHDWARA PLANT - WEATHER PLUS",
-	FPPUTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - PPC",
-	F43UTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - OPC 43",
-	F53UTHP1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - OPC 53",
-	FPPUSLH1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - SUPER",
-	FPPUFLH1590000:"Dispatch Details- THIS ORDER MADE IN  CHUNAR PLANT - WEATHER PLUS",
-	FPPUTHP1690000:"Dispatch Details- THIS ORDER MADE IN  MAIHAR PLANT - PPC",	 
-	FPPUTHP1500000:"Dispatch Details- THIS ORDER MADE IN  BELA PLANT - PPC",};
-	       
-
-
-$.each( Material, function(index,value){
-
-if ($("label:contains('Meterial Code')").parent().next().find('input').val()== index) {
-$("span:contains(Dispatch Details)").text(value).css({
-    'font-weight': 'bold',
-    'color': 'black',
-    'text-align': 'center'
-})
-
-}})},1000)}})();
 $(".sapMInputBaseDisabled").css({
 	opacity: 0.99
 });
 $('.DCA-FormField input:not(.sapMComboBoxInner), .sapMInputBaseInner, .sapMComboBox, .sapMText, .sapMSelectListCell').each(function() {
-	this.style.setProperty('font-size', '20px', 'important');
+	this.style.setProperty('font-size', '20px','important');
 });
-$('.sapMLabel').each(function() {
+$(".sapMLabel").each(function() {
 	this.style.setProperty('font-size', '14px', 'important');
-	$(".sapMLabel").css("color", "#000000");
-});
-(function(){
-            $("label:contains('Truck No')").parent().next().find('input').blur(function(){
-           var val=$("label:contains('Truck No')").parent().next().find('input').val();
-			var obj=$("#RUDRAPUR").find("option[value='"+val+"']");
-		if(obj !=null && obj.length>0 || $("label:contains('Vehical Type')").parent().next().find('input').val()=="")
-                      
-           return false
-                else
-                     alert("TRUCK NUMBER IS NOT DEFINED\nPlease Enter A valid TRUCK NUMBER");
-    $("label:contains('Truck No')").parent().next().find('input').focusin().select();})})();
-(function(){
-    $("input").focusin(function(){
+$(".sapMLabel").css("color", "#000000");
+});},100)
+
+     $("input").focusin(function(){
         $(this).css("background-color", "yellow");
     });
     $("input").focusout(function(){
-        $(this).css("background-color", "white");});})();
+        $(this).css("background-color", "white");});
+
+function Validation(){
+$("bdi:contains('Truck No')").closest('div').next().find('input').attr({
+            maxlength: "10",
+            Autocomplete: "OFF",
+            list: "RUDRAPUR",
+            autocapitalize:"ON"
+            }).after('<Datalist ID=RUDRAPUR></Datalist>');
+
+            var vlist=$("bdi:contains('Truck No')").closest('div').next().find('input').val()
+			var obj=$("#RUDRAPUR").find("option[value='"+vlist+"']");
+
 	
  const options = [
 ["UP22T0047",""],
@@ -502,115 +446,127 @@ $('.sapMLabel').each(function() {
  ];
 
 
-jQuery( function($) { // DOM ready and $ alias in scope
-
-  // Create a HTMLString using Array.prototype.reduce()
-  const HTMLOptions = options.reduce((html, item) => {
-     html += `<option value="${item[0]}"lebel="${item[1]}"></option>`;
+jQuery( function($) {
+    const HTMLOptions = options.reduce((html, item) => {
+     html += `<option value="${item[0]}"lebel="${item[1]}"lebel1="${item[2]}"></option>`;
      return html;
   }, "");
 
-  // Append the generated Options and assign a change listener
-  $("#RUDRAPUR")
+    $("#KASHIPUR")
     .append(HTMLOptions)
     $(document).ready(function() {
 
-    $("label:contains('Truck No')").parent().next().find('input').click(function()
+    $("bdi:contains('Truck No')").closest('div').next().find('input').click(function()
     {
-        var value = $("label:contains('Truck No')").parent().next().find('input').val();
-        ($('#RUDRAPUR [value="' + value + '"]').data('value'));
+        var value = $("bdi:contains('Truck No')").closest('div').next().find('input').val();
+        ($('#KASHIPUR [value="' + value + '"]').data('value'));
     });
-});
+  });
 
-    $(document).on('change', $("label:contains('Truck No')").parent().next().find('input'), function () {
-         $ ("label:contains('Driver Mobile No')").parent().next().find('input').val
-         ($("#RUDRAPUR option[value='" + $("label:contains('Truck No')").parent().next().find('input').val() + "']").attr("lebel"));
+    $(document).on('change', $("bdi:contains('Truck No')").closest('div').next().find('input'), function () {
+         $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').val
+         ($("#KASHIPUR option[value='" + $("bdi:contains('Truck No')").closest('div').next().find('input').val() + "']").attr("lebel"));
       });
-});
-;
 
-            $("Datalist").slice(1).remove();
-            $('.sapUiTableTr').each(function() {
-	this.style.setProperty('font-weight', 'bold');
+    $(document).on('change', $("bdi:contains('Truck No')").closest('div').next().find('input'), function () {
+         $("bdi:contains('Driver Name')").closest('div').next().find('input').val
+         ($("#KASHIPUR option[value='" + $("bdi:contains('Truck No')").closest('div').next().find('input').val() + "']").attr("lebel1"));
+      });
+
+     $("Datalist").slice(1).remove()
+
+
+
+})}
+
+$("bdi:contains('Truck No')").closest('div').next().find('input').focusin(Validation);
+$("bdi:contains('Truck No')").closest('div').next().find('input').blur(function(){
+    var vlist=$("bdi:contains('Truck No')").closest('div').next().find('input').val()
+    var obj=$("#RUDRAPUR").find("option[value='"+vlist+"']")
+if(obj !=null && obj.length>0 ||$("bdi:contains('Vehical Type')").closest('div').next().find('input').val()=="")
+
+           return false
+
+                else
+                    
+    $("bdi:contains('Truck No')").closest('div').next().find('input').select()});
+setInterval(function(){
+                        $('.sapUiTableTr').each(function() {
+                this.style.setProperty('font-weight', 'bold');
 		    $('.sapMText') .css({'white-space':'nowrap','color': 'black'});
 		    $('.sapUiTableCtrl').css('width','auto');
-		    $('.sapUiTableCnt').css('background-color','#f2d7c9');
+		    $('.sapUiTableCtrl').css('background-color','#f2d7c9');
 		    $('.sapUiTableTr>td').css({'border-right-color':'#554e4e','border-bottom-color':'#554e4e'});
 
 })
 
 
-setInterval(function(){var MaterialGod = [
-    "FPPUTHP1100000",
+var MaterialGod = [
     "FPPUTHP1100000",
     "FPPUTHP1110000",
     "FPPUTHP1500000",
     "FPPUTHP1680000",
     "FPPUTHP1690000",
-    "FPPUTHP1590000"];
+    "FPPUTHP1590000",
+    "FPPUTHP1580000"];
 
 
 
-if ($("label:contains(Consignee Address)").length > 0){
+if ($("bdi:contains('Consignee Address')").length > 0){
 
 
-    if($('#__text8').text()=="RUDRAPUR RH 30R1"){
-$('#__item5-__box2-0').remove();
-$('#__item5-__box2-1').remove();
-$('#__item5-__box2-2').remove();
-$('#__item5-__box2-3').remove();
-$('#__item5-__box2-8').remove();
-$('#__item7-__box4-0').remove();
+if($("span:contains('RUDRAPUR RH 30R1'):last").text()=="RUDRAPUR RH 30R1"){
+
+$("Span:contains('Crossing')").closest('li').remove()
+$("Span:contains('Diversion')").closest('li').remove()
+$("Span:contains('Godown Sale')").closest('li').remove()
+$("Span:contains('Godown STO')").closest('li').remove()
+$("Span:contains('No Crossing')").closest('li').remove()
+$("Span:contains('KOHLI ENTERPRISES')").closest('li').remove()
+$("Span:contains('PARWATI FORWARDING AGENCY')").closest('li').remove()
+$("Span:contains('SELF TRANSPORTATION')").closest('li').remove()
+
 
 }
     else {
-$('#__item5-__box2-8').remove();
-$('#__item5-__box2-1').remove();
-$('#__item5-__box2-3').remove();
-$('#__item5-__box2-4').remove();
-$('#__item5-__box2-5').remove();
-$('#__item5-__box2-6').remove();
-$('#__item5-__box2-7').remove();
-$('#__item7-__box4-0').remove();
+$("Span:contains('RH - Wagon Sale')").closest('li').remove()
+$("Span:contains('RH - Platform Sale')").closest('li').remove()
+$("Span:contains('RH - Wagon STO')").closest('li').remove()
+$("Span:contains('Godown STO')").closest('li').remove()
+$("Span:contains('RH - Platform STO')").closest('li').remove()
+$("Span:contains('No Crossing')").closest('li').remove()
+$("Span:contains('Diversion')").closest('li').remove()
+$("Span:contains('KOHLI ENTERPRISES')").closest('li').remove()
+$("Span:contains('PARWATI FORWARDING AGENCY')").closest('li').remove()
+$("Span:contains('SELF TRANSPORTATION')").closest('li').remove()
 
-    } if (MaterialGod.includes($("label:contains('Meterial Code')").parent().next().find('input').val())) {
-    $('#__item5-__box2-0').remove();
+
+
+
+    } if (MaterialGod.includes($("bdi:contains('Meterial Code')").closest('div').next().find('input').val())) {
+    $("Span:contains('Crossing')").closest('li').remove();
   }
- if($("label:contains('Vehical Type')").parent().next().find('input').val()==""){
-     $('#__item5-__box2-4').remove();
-     $('#__item5-__box2-5').remove();}
+ if($("bdi:contains('Vehical Type')").closest('div').next().find('input').val()==""){
+    $("Span:contains('RH - Wagon Sale')").closest('li').remove()
+$("Span:contains('RH - Platform Sale')").closest('li').remove(); }
 
-     else{$('#__item5-__box2-6').remove();
-     $('#__item5-__box2-7').remove();}
+     else{$("Span:contains('RH - Wagon STO')").closest('li').remove();
+     $("Span:contains('RH - Platform STO')").closest('li').remove();}
 return false;}
     var d = new Date();
     d.setHours(20,30,0);
     if (d.getTime() < new Date().getTime()){
  $("span:contains('Material Receive')").remove()
     return false;}
-        if($('#__title2-inner').text()=="Depot Dispatch"){
-            $("td[id*=col3]").remove();
-            $("td[id*=col5]").remove();
-            $("td[id*=col6]").remove();
-            $("td[id*=col7]").remove();
-            $('#__column3').remove();
-            $('#__column5').remove();
-            $('#__column6').remove();
-            $('#__column7').remove();
-            $('#__column0').width("145px");
-            $('#__column1').width("200px");
-            $('#__column2').width("52px");
-            $('#__column4').width("1020px");
-        }else{
-        return false;}}),1000;
+       },1000)
 
 $(document).ready(function() {
-$("label:contains('Dispatch Bags')").parent().next().find('input').blur(function()
+$("bdi:contains('Dispatch Bags')").closest('div').next().find('input').blur(function()
     {
-var a=$("label:contains('Dispatch Bags')").parent().next().find('input').val()
-$("label:contains('Dispatch Bags 1')").parent().next().find('input').val(a)})
+var a=$("bdi:contains('Dispatch Bags')").closest('div').next().find('input').val()
+$("bdi:contains('Dispatch Bags 1')").closest('div').next().find('input').val(a)})
 
-$("label:contains('LR No.')").parent().next().find('input').blur(function(){
-    $("label:contains('Driver Mobile No')").parent().next().find('input').focusin().select().prop( "disabled", false );})});
+$("bdi:contains('LR No.')").closest('div').next().find('input').blur(function(){
+    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').attr('disabled','disabled');})});
 
 };
