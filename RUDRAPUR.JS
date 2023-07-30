@@ -36,6 +36,12 @@ $('.sapMLabel').css("color", "#000000");
     });
     $("input").focusout(function(){
         $(this).css("background-color", "white");});
+	$("bdi:contains('Truck No')").closest('div').next().find('input').attr({
+            maxlength: "10",
+            Autocomplete: "OFF",
+            list: "RUDRAPUR",
+            autocapitalize:"ON"
+            }).after('<Datalist ID=RUDRAPUR></Datalist>');
 
 function Validation(){
 $("bdi:contains('Truck No')").closest('div').next().find('input').attr({
