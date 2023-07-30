@@ -26,9 +26,9 @@ $(".sapMInputBaseDisabled").css({
 $('.DCA-FormField input:not(.sapMComboBoxInner), .sapMInputBaseInner, .sapMComboBox, .sapMText, .sapMSelectListCell').each(function() {
 	this.style.setProperty('font-size', '20px','important');
 });
-$(".sapMLabel").each(function() {
-	this.style.setProperty('font-size', '14px', 'important');
-$(".sapMLabel").css("color", "#000000");
+$('.sapMLabel').each(function() {
+	this.style.setProperty('font-size', '16px', 'important');
+$('.sapMLabel').css("color", "#000000");
 });},100)
 
      $("input").focusin(function(){
@@ -47,7 +47,6 @@ $("bdi:contains('Truck No')").closest('div').next().find('input').attr({
 
             var vlist=$("bdi:contains('Truck No')").closest('div').next().find('input').val()
 			var obj=$("#RUDRAPUR").find("option[value='"+vlist+"']");
-
 	
  const options = [
 ["UP22T0047","",""],
@@ -452,25 +451,25 @@ jQuery( function($) {
      return html;
   }, "");
 
-    $("#KASHIPUR")
+    $("#RUDRAPUR")
     .append(HTMLOptions)
     $(document).ready(function() {
 
     $("bdi:contains('Truck No')").closest('div').next().find('input').click(function()
     {
         var value = $("bdi:contains('Truck No')").closest('div').next().find('input').val();
-        ($('#KASHIPUR [value="' + value + '"]').data('value'));
+        ($('#RUDRAPUR [value="' + value + '"]').data('value'));
     });
   });
 
     $(document).on('change', $("bdi:contains('Truck No')").closest('div').next().find('input'), function () {
          $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').val
-         ($("#KASHIPUR option[value='" + $("bdi:contains('Truck No')").closest('div').next().find('input').val() + "']").attr("lebel"));
+         ($("#RUDRAPUR option[value='" + $("bdi:contains('Truck No')").closest('div').next().find('input').val() + "']").attr("lebel"));
       });
 
     $(document).on('change', $("bdi:contains('Truck No')").closest('div').next().find('input'), function () {
          $("bdi:contains('Driver Name')").closest('div').next().find('input').val
-         ($("#KASHIPUR option[value='" + $("bdi:contains('Truck No')").closest('div').next().find('input').val() + "']").attr("lebel1"));
+         ($("#RUDRAPUR option[value='" + $("bdi:contains('Truck No')").closest('div').next().find('input').val() + "']").attr("lebel1"));
       });
 
      $("Datalist").slice(1).remove()
@@ -490,7 +489,7 @@ if(obj !=null && obj.length>0 ||$("bdi:contains('Vehical Type')").closest('div')
                 else
                     
     $("bdi:contains('Truck No')").closest('div').next().find('input').select()});
-setInterval(function(){
+ setInterval(function(){
                         $('.sapUiTableTr').each(function() {
                 this.style.setProperty('font-weight', 'bold');
 		    $('.sapMText') .css({'white-space':'nowrap','color': 'black'});
@@ -515,7 +514,7 @@ var MaterialGod = [
 if ($("bdi:contains('Consignee Address')").length > 0){
 
 
-if($("span:contains('RUDRAPUR RH 30R1'):last").text()=="RUDRAPUR RH 30R1"){
+if($("span:contains('KASHIPUR RH 27R1'):last").text()=="KASHIPUR RH 27R1"){
 
 $("Span:contains('Crossing')").closest('li').remove()
 $("Span:contains('Diversion')").closest('li').remove()
@@ -525,7 +524,7 @@ $("Span:contains('No Crossing')").closest('li').remove()
 $("Span:contains('KOHLI ENTERPRISES')").closest('li').remove()
 $("Span:contains('PARWATI FORWARDING AGENCY')").closest('li').remove()
 $("Span:contains('SELF TRANSPORTATION')").closest('li').remove()
-
+$("Span:contains('GANPATI TRANSPORT COMPANY')").closest('li').remove()
 
 }
     else {
@@ -539,7 +538,7 @@ $("Span:contains('Diversion')").closest('li').remove()
 $("Span:contains('KOHLI ENTERPRISES')").closest('li').remove()
 $("Span:contains('PARWATI FORWARDING AGENCY')").closest('li').remove()
 $("Span:contains('SELF TRANSPORTATION')").closest('li').remove()
-
+$("Span:contains('GANPATI TRANSPORT COMPANY')").closest('li').remove()
 
 
 
@@ -558,7 +557,16 @@ return false;}
     if (d.getTime() < new Date().getTime()){
  $("span:contains('Material Receive')").remove()
     return false;}
-       },1000)
+      
+                if($("bdi:contains('Dispatch Type*')").text()=="Dispatch Type*"){
+            $("td[id*=col1]").remove();
+            $("td[id*=col4]").remove();
+            $("td[id*=col5]").remove();
+            $("td[id*=col8]").remove();
+            $("td[id*=col9]").remove();
+                   }else
+        {
+        return false;}},1)
 
 $(document).ready(function() {
 $("bdi:contains('Dispatch Bags')").closest('div').next().find('input').blur(function()
@@ -566,7 +574,72 @@ $("bdi:contains('Dispatch Bags')").closest('div').next().find('input').blur(func
 var a=$("bdi:contains('Dispatch Bags')").closest('div').next().find('input').val()
 $("bdi:contains('Dispatch Bags 1')").closest('div').next().find('input').val(a)})
 
-$("bdi:contains('LR No.')").closest('div').next().find('input').blur(function(){
-    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').attr('disabled','disabled');})});
+});
+   function Mob(){
 
-};
+    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').select().focusin();
+    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').focusout().prop ("disabled", true )}
+
+
+
+    $("bdi:contains('LR No.')").closest('div').next().find('input').blur(Mob)
+
+
+
+var tt = setInterval(function(){
+ let $input = $('bdi:contains("Meterial Code")').closest('div').next().find('input'),
+    $output = $('bdi:contains("Consignee Address")').closest('div').next().next('div').find('span'),
+    delimits = [0,1,7,10],
+    lookup = [
+      { C: 'C&T', D: 'DAMAGE', F: 'FRESH', P: 'DAMAGE' },
+      { PPUTHP:'PPC', PPUSLH: 'SUPER', PPUFLH: 'WEATHER PLUS', '43UTHP': 'OPC43', '53UTHP': 'OPC53' },
+     { '110':'ADITYA CEMENT WORKS',
+'111':'VIKRAM CEMENT WORKS',
+'112':'BHATINDA CEMENT WORKS',
+'113':'PANIPAT CEMENT WORKS',
+'114':'DADRI CEMENT WORKS',
+'115':'KOTPUTLI CEMENT WORKS',
+'116':'ALIGARH CEMENT WORKS',
+'118':'ADITYA CEMENT WORKS - II',
+'120':'RAWAN CEMENT WORKS',
+'122':'RAWAN CEMENT WORKS',
+'138':'MANIKGARH CEMENT WORKS',
+'150':'BELA CEMENT WORKS',
+'151':'SIDHI CEMENT WORKS',
+'152':'BAGA CEMENT WORKS',
+'153':'BHAGERI CEMENT WORKS',
+'154':'DALLA CEMENT WORKS',
+'155':'DALLA SUPER CEMENT WORKS',
+'156':'TANDA CEMENT WORKS',
+'157':'SIKANDARABAD CEMENT WORKS',
+'158':'BARA CEMENT WORKS',
+'159':'CHUNAR CEMENT WORKS',
+'160':'JHAJJAR CEMENT WORKS',
+'161':'KATNI CEMENT WORKS',
+'162':'MIRZAPUR CEMENT WORKS',
+'163':'RAEBARELI CEMENT WORKS',
+'164':'PALI CEMENT WORKS',
+'165':'DHAR CEMENT WORKS',
+'166':'ROORKEE CEMENT WORKS',
+'167':'NEEM KA THANA CEMENT WORKS',
+'168':'NATHDWARA CEMENT WORKS',
+'169':'MAIHAR CEMENT WORKS',
+'170':'HIRMI CEMENT WORKS',
+'183':'MAGDALLA CEMENT WORKS',
+'188':'MANIKGARH CEMENT WORKS - II'
+},
+      { '0000': 'MRP', '5000': 'NON MRP' }
+    ],
+    output_order = [2,3,0,1]; //based on the lookup index
+
+$input.val(); //simulating whatever the page loaded
+
+let output = delimits.map((delimit, index) =>
+  lookup[index][$input.val().substring(delimit, delimits[index + 1])]);
+$output.text(output_order.map((index) => output[index]).join(' - '))
+.css({
+    'font-weight': 'bold',
+    'color': 'black',
+    'text-align': 'center'
+});},1000)
+setTimeout(function() { clearInterval(tt); }, 5000);};
