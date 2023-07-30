@@ -582,12 +582,17 @@ var a=$("bdi:contains('Dispatch Bags')").closest('div').next().find('input').val
 $("bdi:contains('Dispatch Bags 1')").closest('div').next().find('input').val(a)})
 
 });
-   function Mob(){
+   function Mob(){if
+                  ($("bdi:contains('Driver Mobile No')").closest('div').next().find('input').val()==""||
+       $("bdi:contains('Driver Name')").closest('div').next().find('input').val()=="")
 
+   alert("Pls ask Depot to add Vehicle Detail/Mobile No, Name");
+
+    else
+
+    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').prop ("disabled", false )
     $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').select().focusin();
     $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').focusout().prop ("disabled", true )}
-
-
 
     $("bdi:contains('LR No.')").closest('div').next().find('input').blur(Mob)
 
