@@ -1,5 +1,5 @@
 function gmMain () {
-    console.log ('A "New" page has loaded.');
+    console.log ('A "New" page has led.');
  function isNumberKey(evt) {
         var charCode = (evt.which) ? evt.which : event.keyCode;
         if (charCode > 31 && (charCode < 48 || charCode > 57))
