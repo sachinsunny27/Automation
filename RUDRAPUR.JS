@@ -440,6 +440,9 @@ $("bdi:contains('Truck No')").closest('div').next().find('input').attr({
 ["UK06CB1524","",""],
 ["UK06CB1696","",""],
 ["UK06CA9197","",""],
+["UK06CB5912","9917120662","IDRISH"],
+["UK06CB7176","7668915865","VINAY"],
+["UK03CA0494","7500554080","SATYAPAL"], 
 ["UK06CB2884","",""]
 
  ];
