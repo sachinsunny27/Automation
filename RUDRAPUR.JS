@@ -9,13 +9,13 @@ function gmMain () {
     }}
        (function(){
     if ($("bdi:contains('Consignee Address')").length > 0){
+    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').prop ("disabled", true )
+    $("bdi:contains('Driver Name')").closest('div').next().find('input').prop ("disabled", true )
     $("bdi:contains('Dispatch Bags')").closest('div').next().find('input').keypress(isNumberKey);
     $("bdi:contains('LR No.')").closest('div').next().find('input').attr("Autocomplete","ON");
-    $("bdi:contains('Driver Mobile No')").closest('div').next().find('input').val(8171751515).attr({Autocomplete:"ON",type:"value"});
     $("bdi:contains('Customer Address')").closest('div').next().find('textarea').css('background-color','lightblue');
     $("bdi:contains('Consignee Address')").closest('div').next().find('textarea').css('background-color','lightblue');
     $("bdi:contains('Truck No')").closest('div').next().find('input').attr({Placeholder: "TRUCK NUMBER"})
-    
   }})();
 
     setInterval(function()
