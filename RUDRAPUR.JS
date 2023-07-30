@@ -514,7 +514,7 @@ var MaterialGod = [
 if ($("bdi:contains('Consignee Address')").length > 0){
 
 
-if($("span:contains('KASHIPUR RH 27R1'):last").text()=="KASHIPUR RH 27R1"){
+if($("span:contains('RUDRAPUR RH 30R1'):last").text()=="RUDRAPUR RH 30R1"){
 
 $("Span:contains('Crossing')").closest('li').remove()
 $("Span:contains('Diversion')").closest('li').remove()
